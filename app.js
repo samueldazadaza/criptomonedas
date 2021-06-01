@@ -9,6 +9,8 @@ new Vue({
       changePercent: -2,
       // prices: [8400, 7900, 8200, 9000, 9400, 10000, 11456],
 
+      value: 0,
+      
       color: 'f4f4f4',
 
       price: 8400,
@@ -30,6 +32,14 @@ new Vue({
   computed: {
     title () {
       return `${this.name} -- ${this.symbol}`
+    },
+
+    convertedValue () {
+      if (!this.value) {
+        return 0
+      }
+
+      return this.value / this.price
     }
   },
 
