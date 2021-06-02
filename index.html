@@ -14,19 +14,15 @@
     <coin-detail
       v-on:change-color="updateColor"
       v-bind:coin="btc">
+      <template v-slot:text>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil esse distinctio, omnis similique eligendi consequatur, dicta quidem ut rem dolor, autem tenetur? Illum ratione ad nam. Iste earum exercitationem facilis.</p>
+        
+      </template>  
+      <template v-slot:link>
+        <a href="#">Link</a>
+      </template>  
+
     </coin-detail>
-
-    <coin-detail
-    v-on:change-color="updateColor"
-    v-bind:coin="btc">
-    </coin-detail>
-
-    <coin-detail
-    v-on:change-color="updateColor"
-    v-bind:coin="btc">
-    </coin-detail>
-
-
 
       <!-- <span v-show="changePercent > 0">👍</span>
       <span v-show="changePercent < 0">👎</span>
